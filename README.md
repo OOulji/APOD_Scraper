@@ -1,0 +1,1 @@
+Small script that NASA's astronomy pic of the day and saves it in the script folder. Nothing fancy, just learning Beautiful Soup. 
