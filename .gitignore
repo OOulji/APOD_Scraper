@@ -1,3 +1,5 @@
 /apod_env
+/apod_scrapper
+apod_scrapper.code-workspace
 /.vscode
 apod.code-workspace
