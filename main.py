@@ -14,12 +14,18 @@ def main(date):
 
   
     image = soup.find('img')
-    image_url = image['src']
+
+    if image is not None:
+        image_url = image['src']
+        img = Image.open(requests.get("https://apod.nasa.gov/apod/"+image_url, stream = True).raw)
+        img.save(date+".jpg")
+        print("Image found and saved")
+        img.show()
+    else:
+        print("No image found.")
 
 
-    img = Image.open(requests.get("https://apod.nasa.gov/apod/"+image_url, stream = True).raw)
-    img.save(date+".jpg")
-    img.show()
+    
     
 
 if __name__ == "__main__":
