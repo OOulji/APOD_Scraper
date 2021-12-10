@@ -1,5 +1,6 @@
 /apod
 /apod_scrapper
+/images
 apod_scrapper.code-workspace
 /.vscode
 apod.code-workspace
