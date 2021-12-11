@@ -2,4 +2,5 @@ Small script that grabs NASA's astronomy pic of the day and saves it in the scri
 
 Right now, it grabs today's pic, saves it and prints the title in the terminal.
 
-TODO: I'd like to print the description too. 
+To install clone the repo and: `pip install -r requirements.txt`
+To use: `python3 main.py` while in the cloned folder
