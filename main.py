@@ -4,9 +4,9 @@ from bs4 import BeautifulSoup
 from datetime import date
 
 
-def get_date():
-    d=date.today().strftime("%y%m%d")
-    return d
+def get_date() -> str:
+    current_date = date.today().strftime("%y%m%d")
+    return current_date
 
 def fetch_image(date):
 
