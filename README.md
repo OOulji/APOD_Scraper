@@ -5,3 +5,5 @@ Right now, it grabs today's pic, saves it and prints the title in the terminal.
 To install clone the repo and: `pip install -r requirements.txt`
 
 To use: `python3 main.py` while in the cloned folder
+
+`python3 main.py -s` saves the image, currently in the same folder as main.py 
