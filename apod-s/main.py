@@ -1,5 +1,6 @@
 import requests
 import argparse
+import json
 from PIL import Image
 from bs4 import BeautifulSoup
 from datetime import date
@@ -29,7 +30,7 @@ def fetch_image(date: str, save_image: bool):
     if image is not None:
         image_url = image['src']
         img = Image.open(requests.get("https://apod.nasa.gov/apod/"+image_url, stream = True).raw)
-        if save_image : img.save({date},".jpg")
+        if save_image : img.save(f'{date}.jpeg',"JPEG")
         print("Image found and saved!\n")
         print(title.get_text())
         img.show()
@@ -43,11 +44,11 @@ def main():
     parser = argparse.ArgumentParser(prog="apod-s",
                                     description="Retrieves NASA's Astronomy Picture of the day")
     
-    parser.add_argument('-s', action="store_true")
+    parser.add_argument('-s','--save', action="store_true")
 
     args = parser.parse_args()
 
-    if args.s:
+    if args.save:
         save_image = True
 
     date = get_date()
