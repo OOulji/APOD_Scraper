@@ -28,7 +28,7 @@ def fetch_image(date):
     if image is not None:
         image_url = image['src']
         img = Image.open(requests.get("https://apod.nasa.gov/apod/"+image_url, stream = True).raw)
-        img.save("images/"+date+".jpg")
+        #img.save(date+".jpg")
         print("Image found and saved!\n")
         print(title.get_text())
         img.show()
