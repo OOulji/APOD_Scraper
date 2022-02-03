@@ -6,4 +6,4 @@ To install clone the repo and: `pip install -r requirements.txt`
 
 To use: `python3 main.py` while in the cloned folder
 
-`python3 main.py -s` saves the image, currently in the same folder as main.py 
+`python3 /apod-s/main.py -s` saves the image, currently in the same folder as main.py 
